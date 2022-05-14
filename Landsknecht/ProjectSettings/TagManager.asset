@@ -41,3 +41,12 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Props_back
+    uniqueID: 2528914173
+    locked: 0
+  - name: Level
+    uniqueID: 1048885321
+    locked: 0
+  - name: Player
+    uniqueID: 489516691
+    locked: 0
