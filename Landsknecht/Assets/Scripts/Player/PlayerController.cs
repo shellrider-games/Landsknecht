@@ -13,6 +13,8 @@ public class PlayerController : MonoBehaviour
     private BoxCollider2D _collider;
 
     private bool facingRight;
+    private bool attacking;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -25,15 +27,28 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        _rigidbody.velocity = new Vector2(moveSpeed * Input.GetAxis("Horizontal"), _rigidbody.velocity.y);
-        
-        if (_rigidbody.velocity.x > 0) facingRight = true;
-        if (_rigidbody.velocity.x < 0) facingRight = false;
-
-        if (IsGrounded() && Input.GetKeyDown(KeyCode.Space))
+        if (!attacking)
         {
-            _rigidbody.velocity = new Vector2(_rigidbody.velocity.x, jumpStrength);
+            _rigidbody.velocity = new Vector2(moveSpeed * Input.GetAxis("Horizontal"), _rigidbody.velocity.y);
+        
+            if (_rigidbody.velocity.x > 0) facingRight = true;
+            if (_rigidbody.velocity.x < 0) facingRight = false;
+
+            if (IsGrounded() && Input.GetKeyDown(KeyCode.Space))
+            {
+                _rigidbody.velocity = new Vector2(_rigidbody.velocity.x, jumpStrength);
+            }
+
+            if (Input.GetKeyDown(KeyCode.X))
+            {
+                attacking = true;
+            }
         }
+        else
+        {
+            if (IsGrounded()) _rigidbody.velocity = new Vector2(0, _rigidbody.velocity.y);
+        }
+        
         
         SetAnimationData();
     }
@@ -44,6 +59,7 @@ public class PlayerController : MonoBehaviour
         _animator.SetBool("walking", Mathf.Abs(_rigidbody.velocity.x) > 0);
         _animator.SetFloat("yVelocity", _rigidbody.velocity.y);
         _animator.SetBool("grounded", IsGrounded());
+        _animator.SetBool("attacking", attacking);
     }
 
     private bool IsGrounded()
@@ -52,5 +68,10 @@ public class PlayerController : MonoBehaviour
         RaycastHit2D boxcastHit = Physics2D.BoxCast(_collider.bounds.center, _collider.bounds.size, 0f, Vector2.down,
             epsilon, groundLayer);
         return boxcastHit.collider != null;
+    }
+
+    private void AttackOver()
+    {
+        attacking = false;
     }
 }

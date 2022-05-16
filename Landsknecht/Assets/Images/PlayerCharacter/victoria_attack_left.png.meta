@@ -104,13 +104,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: landsknechtin_idle_right_0
+      name: victoria_attack_left_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 31
-        height: 50
+        width: 61
+        height: 58
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -118,20 +118,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 465a63dac18b4f84ea9087756eeea935
-      internalID: -1635006744
+      spriteID: 68e3f62ec2203bd4db412543a0baf6ef
+      internalID: 1335010961
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: landsknechtin_idle_right_1
+      name: victoria_attack_left_1
       rect:
         serializedVersion: 2
-        x: 31
+        x: 61
         y: 0
-        width: 31
-        height: 50
+        width: 61
+        height: 58
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -139,8 +139,71 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4dd390356d76b524381bbfc4466a05ae
-      internalID: -158417743
+      spriteID: 2dd77f451541751438a049e6ea84de13
+      internalID: -1342045150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: victoria_attack_left_2
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 0
+        width: 61
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 189871acc6b46b04d92c3dc7a1a54cbe
+      internalID: -869234646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: victoria_attack_left_3
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 0
+        width: 61
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d77f43fcac9b7aa46bf1e120c516758e
+      internalID: -616929007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: victoria_attack_left_4
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 0
+        width: 61
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ec077cd1e3c98e4a84ed08a937ff2ab
+      internalID: -671401524
       vertices: []
       indices: 
       edges: []
@@ -156,8 +219,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      landsknechtin_idle_right_1: -158417743
-      landsknechtin_idle_right_0: -1635006744
+      victoria_attack_left_4: -671401524
+      victoria_attack_left_2: -869234646
+      victoria_attack_left_3: -616929007
+      victoria_attack_left_0: 1335010961
+      victoria_attack_left_1: -1342045150
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
