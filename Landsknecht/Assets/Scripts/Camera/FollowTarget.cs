@@ -16,7 +16,7 @@ public class FollowTarget : MonoBehaviour
     public Transform parallaxNear;
 
     public float farParallaxFactor, midParallaxFactor, nearParallaxFactor;
-    public float minY, maxY;
+    public float minY, maxY, minX, maxX;
     // Start is called before the first frame update
     void Start()
     {
@@ -26,10 +26,10 @@ public class FollowTarget : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position = new Vector3(target.position.x + 6, Mathf.Clamp(minY, target.position.y , maxY), -10);
+        transform.position = new Vector3(Mathf.Clamp(minX,target.position.x + 6,maxX), Mathf.Clamp(minY, target.position.y , maxY), -10);
         staticBackground.transform.position = new Vector3(transform.position.x, transform.position.y);
-        parallaxFar.position = new Vector3(transform.position.x * farParallaxFactor, 0,0);
-        parallaxMid.position = new Vector3(transform.position.x * midParallaxFactor, 0,0);
+        parallaxFar.position = new Vector3(transform.position.x * farParallaxFactor, (transform.position.y - 3.5f) * farParallaxFactor,0);
+        parallaxMid.position = new Vector3(transform.position.x * midParallaxFactor, (transform.position.y - 3.5f) * midParallaxFactor,0);
         parallaxNear.position = new Vector3(transform.position.x * nearParallaxFactor, 0,0);
     }
 }

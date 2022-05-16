@@ -104,12 +104,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: landsknechtin_idle_right_0
+      name: victoria_jump_right_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 31
+        width: 35
         height: 50
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -118,19 +118,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 465a63dac18b4f84ea9087756eeea935
-      internalID: -1635006744
+      spriteID: 8e265fd996758514b8ecece700296272
+      internalID: -787657234
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: landsknechtin_idle_right_1
+      name: victoria_jump_right_1
       rect:
         serializedVersion: 2
-        x: 31
+        x: 35
         y: 0
-        width: 31
+        width: 35
         height: 50
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -139,8 +139,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4dd390356d76b524381bbfc4466a05ae
-      internalID: -158417743
+      spriteID: 1635a6c14188f9c47be63a2eb3dbb5a7
+      internalID: 1617164497
       vertices: []
       indices: 
       edges: []
@@ -156,8 +156,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      landsknechtin_idle_right_1: -158417743
-      landsknechtin_idle_right_0: -1635006744
+      victoria_jump_right_0: -787657234
+      victoria_jump_right_1: 1617164497
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
