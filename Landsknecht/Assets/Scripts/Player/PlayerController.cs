@@ -49,7 +49,7 @@ public class PlayerController : MonoBehaviour
     private bool IsGrounded()
     {
         float epsilon = 0.1f;
-        RaycastHit2D boxcastHit = Physics2D.BoxCast(_collider.bounds.center, new Vector2(_collider.bounds.size.x + epsilon, _collider.bounds.size.y + epsilon), 0f, Vector2.down,
+        RaycastHit2D boxcastHit = Physics2D.BoxCast(_collider.bounds.center, _collider.bounds.size, 0f, Vector2.down,
             epsilon, groundLayer);
         return boxcastHit.collider != null;
     }
