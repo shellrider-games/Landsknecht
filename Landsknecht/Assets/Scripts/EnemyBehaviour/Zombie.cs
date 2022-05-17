@@ -53,7 +53,7 @@ public class Zombie : MonoBehaviour
     {
         float directionFactor = 1.0f;
         if (_spriteRenderer.flipX) directionFactor *= -1.0f;
-        RaycastHit2D boxCastHit = Physics2D.BoxCast(transform.position, new Vector2(10.0f, 10.0f),
+        RaycastHit2D boxCastHit = Physics2D.BoxCast(transform.position, new Vector2(8.0f, 10.0f),
             0, Vector2.right * DirectionFactor(), detectDistance,_PlayerLayerMask.value);
         if (boxCastHit.collider == null)
         {
@@ -98,9 +98,10 @@ public class Zombie : MonoBehaviour
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.green;
-        Gizmos.DrawRay(transform.position,Vector2.left*detectDistance);
-        Gizmos.DrawRay(transform.position, Vector2.right*detectDistance);
+        var position = transform.position;
+        Gizmos.DrawRay(position,Vector2.left*detectDistance);
+        Gizmos.DrawRay(position, Vector2.right*detectDistance);
         Gizmos.color = Color.blue;
-        Gizmos.DrawRay(transform.position, Vector2.down*2.0f);
+        Gizmos.DrawRay(position, Vector2.down*2.0f);
     }
 }
