@@ -85,7 +85,6 @@ public class PlayerController : MonoBehaviour
 
     public void TakeHit()
     {
-        Debug.Log("Player got hit");
         Knockback();
     }
 
