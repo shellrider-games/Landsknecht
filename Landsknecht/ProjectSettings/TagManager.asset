@@ -13,7 +13,7 @@ TagManager:
   - UI
   - PlayerHitbox
   - EnemyHitbox
-  - 
+  - PlayerHurtbox
   - 
   - 
   - 
@@ -49,6 +49,9 @@ TagManager:
     locked: 0
   - name: Level
     uniqueID: 1048885321
+    locked: 0
+  - name: Enemies
+    uniqueID: 1940860071
     locked: 0
   - name: Player
     uniqueID: 489516691
