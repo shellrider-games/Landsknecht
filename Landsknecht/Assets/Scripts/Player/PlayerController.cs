@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -14,6 +15,7 @@ public class PlayerController : MonoBehaviour
 
     private bool facingRight;
     private bool attacking;
+    private bool inKnockback;
     
     // Start is called before the first frame update
     void Start()
@@ -27,7 +29,7 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!attacking)
+        if (!(attacking || inKnockback))
         {
             _rigidbody.velocity = new Vector2(moveSpeed * Input.GetAxis("Horizontal"), _rigidbody.velocity.y);
         
@@ -46,7 +48,11 @@ public class PlayerController : MonoBehaviour
         }
         else
         {
-            if (IsGrounded()) _rigidbody.velocity = new Vector2(0, _rigidbody.velocity.y);
+            if (IsGrounded())
+            {
+                _rigidbody.velocity = new Vector2(0, _rigidbody.velocity.y);
+                inKnockback = false;
+            }
         }
         
         
@@ -73,5 +79,27 @@ public class PlayerController : MonoBehaviour
     private void AttackOver()
     {
         attacking = false;
+    }
+
+    
+
+    public void TakeHit()
+    {
+        Debug.Log("Player got hit");
+        Knockback();
+    }
+
+    private void Knockback()
+    {
+        float xValue = 5.0f;
+        float yValue = 3.0f;
+        if (facingRight)
+        {
+            xValue *= -1;
+        }
+        //immediatley shoot up character to avoid is on ground.
+        transform.position = new Vector3(transform.position.x, transform.position.y + 0.11f, transform.position.z);
+        _rigidbody.velocity = new Vector2(xValue, yValue);
+        inKnockback = true;
     }
 }

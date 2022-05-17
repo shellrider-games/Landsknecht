@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 3302119983649645752}
   - component: {fileID: 3302119983649645767}
   - component: {fileID: 3302119983649645753}
+  - component: {fileID: 5177726354152177726}
   m_Layer: 3
   m_Name: barrel
   m_TagString: Untagged
@@ -146,3 +147,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77a9046dd5bb5cb46b8be9eb68170604, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &5177726354152177726
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3302119983649645764}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f2fbf63fa431c942a6501bdf0878c46, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hurtCallback:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3302119983649645753}
+        m_TargetAssemblyTypeName: Barrel, Assembly-CSharp
+        m_MethodName: StartDestroy
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2

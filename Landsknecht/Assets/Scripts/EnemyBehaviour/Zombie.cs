@@ -1,15 +1,14 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Barrel : MonoBehaviour
+public class Zombie : MonoBehaviour
 {
-    private BoxCollider2D _collider;
+    public int hitPoints;
     // Start is called before the first frame update
     void Start()
     {
-        _collider = GetComponent<BoxCollider2D>();
+        
     }
 
     // Update is called once per frame
@@ -17,9 +16,9 @@ public class Barrel : MonoBehaviour
     {
         
     }
-    
-    public void StartDestroy()
+
+    public void TakeHit()
     {
-        Destroy(gameObject);
+        if(--hitPoints <= 0) Destroy(gameObject);
     }
 }
