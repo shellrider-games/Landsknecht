@@ -38,6 +38,7 @@ public class PlayerController : MonoBehaviour
          
          facingRight = true;
          
+         UIController.instance.SetMaxHealth(maxHealth);
          UIController.instance.SetHPValue(currentHealth);
     }
 

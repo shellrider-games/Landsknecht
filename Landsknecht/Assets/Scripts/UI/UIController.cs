@@ -3,13 +3,13 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Rendering;
+using UnityEngine.UI;
 
 public class UIController : MonoBehaviour
 {
     public static UIController instance;
-
-    [SerializeField] private TextMeshProUGUI _hpValue;
-    
+    public Slider hpbar;
     private void Awake()
     {
         instance = this;
@@ -29,7 +29,13 @@ public class UIController : MonoBehaviour
 
     public void SetHPValue(int hp)
     {
-        _hpValue.text = hp.ToString();
+        hpbar.value = hp;
+    }
+
+    public void SetMaxHealth(int maxHealth)
+    {
+        hpbar.maxValue = maxHealth;
+        hpbar.value = maxHealth;
     }
     
 }
