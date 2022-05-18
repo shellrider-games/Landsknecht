@@ -9,6 +9,9 @@ public class PlayerController : MonoBehaviour
     public float jumpStrength;
     public LayerMask groundLayer;
     
+    public int maxHealth;
+    private int currentHealth;
+    
     private Rigidbody2D _rigidbody;
     private Animator _animator;
     private BoxCollider2D _collider;
@@ -17,12 +20,16 @@ public class PlayerController : MonoBehaviour
     private bool attacking;
     private bool inKnockback;
     
+    
     // Start is called before the first frame update
     void Start()
     {
          _rigidbody = GetComponent<Rigidbody2D>();
          _animator = GetComponent<Animator>();
          _collider = GetComponent <BoxCollider2D>();
+
+         currentHealth = maxHealth;
+         
          facingRight = true;
     }
 
@@ -86,6 +93,8 @@ public class PlayerController : MonoBehaviour
     public void TakeHit()
     {
         Knockback();
+        currentHealth--;
+        if(currentHealth <= 0) Die();
     }
 
     private void Knockback()
@@ -100,5 +109,10 @@ public class PlayerController : MonoBehaviour
         transform.position = new Vector3(transform.position.x, transform.position.y + 0.11f, transform.position.z);
         _rigidbody.velocity = new Vector2(xValue, yValue);
         inKnockback = true;
+    }
+
+    private void Die()
+    {
+        gameObject.SetActive(false);
     }
 }

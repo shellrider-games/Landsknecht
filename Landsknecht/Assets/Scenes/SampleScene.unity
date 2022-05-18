@@ -1238,6 +1238,7 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 8
+  maxHealth: 3
 --- !u!212 &740602409
 SpriteRenderer:
   m_ObjectHideFlags: 0
