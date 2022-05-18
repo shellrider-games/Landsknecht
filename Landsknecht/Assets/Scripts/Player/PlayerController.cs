@@ -8,17 +8,22 @@ public class PlayerController : MonoBehaviour
     public float moveSpeed;
     public float jumpStrength;
     public LayerMask groundLayer;
-    
+    public GameObject spriteContainer;
+
     public int maxHealth;
     private int currentHealth;
     
     private Rigidbody2D _rigidbody;
     private Animator _animator;
     private BoxCollider2D _collider;
+    private SpriteRenderer _spriteRenderer;
 
     private bool facingRight;
     private bool attacking;
     private bool inKnockback;
+
+    public Material defaultMaterial;
+    public Material inKnockbackMaterial;
     
     
     // Start is called before the first frame update
@@ -26,7 +31,8 @@ public class PlayerController : MonoBehaviour
     {
          _rigidbody = GetComponent<Rigidbody2D>();
          _animator = GetComponent<Animator>();
-         _collider = GetComponent <BoxCollider2D>();
+         _collider = GetComponent<BoxCollider2D>();
+         _spriteRenderer = spriteContainer.GetComponent<SpriteRenderer>();
 
          currentHealth = maxHealth;
          
@@ -58,6 +64,7 @@ public class PlayerController : MonoBehaviour
             if (IsGrounded())
             {
                 _rigidbody.velocity = new Vector2(0, _rigidbody.velocity.y);
+                _spriteRenderer.material = defaultMaterial;
                 inKnockback = false;
             }
         }
@@ -108,6 +115,7 @@ public class PlayerController : MonoBehaviour
         //immediatley shoot up character to avoid is on ground.
         transform.position = new Vector3(transform.position.x, transform.position.y + 0.11f, transform.position.z);
         _rigidbody.velocity = new Vector2(xValue, yValue);
+        _spriteRenderer.material = inKnockbackMaterial; 
         inKnockback = true;
     }
 
