@@ -37,6 +37,8 @@ public class PlayerController : MonoBehaviour
          currentHealth = maxHealth;
          
          facingRight = true;
+         
+         UIController.instance.SetHPValue(currentHealth);
     }
 
     // Update is called once per frame
@@ -101,6 +103,7 @@ public class PlayerController : MonoBehaviour
     {
         Knockback();
         currentHealth--;
+        UIController.instance.SetHPValue(currentHealth);
         if(currentHealth <= 0) Die();
     }
 
