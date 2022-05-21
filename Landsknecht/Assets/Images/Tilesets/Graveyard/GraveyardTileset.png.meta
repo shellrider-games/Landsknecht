@@ -710,6 +710,81 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: GraveyardTileset_26
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -8, y: 7}
+        - {x: -8, y: 4}
+        - {x: 8, y: 4}
+        - {x: 8, y: 7}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 138c440821373d540a34e6c605024781
+      internalID: 402661879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GraveyardTileset_27
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -8, y: 7}
+        - {x: -8, y: 4}
+        - {x: 8, y: 4}
+        - {x: 8, y: 7}
+      tessellationDetail: 0
+      bones: []
+      spriteID: c661edd526603c643a5ae86fc20cf3b5
+      internalID: 901671245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GraveyardTileset_28
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -8, y: 7}
+        - {x: -8, y: 4}
+        - {x: 8, y: 4}
+        - {x: 8, y: 7}
+      tessellationDetail: 0
+      bones: []
+      spriteID: b148f1c0e2c4afd48aeb986086383c04
+      internalID: 1198759929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -721,13 +796,16 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
+      GraveyardTileset_13: 1596394883
       GraveyardTileset_14: 40517603
       GraveyardTileset_11: -520677035
       GraveyardTileset_15: -1869828649
       GraveyardTileset_3: 370108517
       GraveyardTileset_12: 1255665904
+      GraveyardTileset_27: 901671245
       GraveyardTileset_4: -1770986217
       GraveyardTileset_23: -660350516
+      GraveyardTileset_28: 1198759929
       GraveyardTileset_18: -629915200
       GraveyardTileset_7: -1206760587
       GraveyardTileset_17: -543492480
@@ -746,7 +824,7 @@ TextureImporter:
       GraveyardTileset_24: 327136864
       GraveyardTileset_22: 1661238266
       GraveyardTileset_21: 975826929
-      GraveyardTileset_13: 1596394883
+      GraveyardTileset_26: 402661879
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
