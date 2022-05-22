@@ -96,7 +96,12 @@ public class Zombie : MonoBehaviour
     {
         if (--hitPoints <= 0)
         {
-            Instantiate(deathAnimation, transform.position, Quaternion.identity);
+            ParticleSystem ps = Instantiate(deathAnimation, transform.position, Quaternion.identity).GetComponent<ParticleSystem>();
+            var sh = ps.shape;
+            var em = ps.emission;
+            em.rateOverTime = new ParticleSystem.MinMaxCurve(600f, 600f);
+            sh.scale = new Vector3(1f, 2f, 1f);
+            sh.position = sh.position + new Vector3(0f, -0.8f, 0f);
             Destroy(gameObject);
         }
     }

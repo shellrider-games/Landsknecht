@@ -54,7 +54,12 @@ public class Skeleton : MonoBehaviour
     {
         if (--hitPoints <= 0)
         {
-            Instantiate(deathAnimation, transform.position, Quaternion.identity);
+            ParticleSystem ps = Instantiate(deathAnimation, transform.position, Quaternion.identity).GetComponent<ParticleSystem>();
+            var sh = ps.shape;
+            var em = ps.emission;
+            em.rateOverTime = new ParticleSystem.MinMaxCurve(600f, 600f);
+            sh.scale = new Vector3(1f, 2.5f, 1f);
+            sh.position = sh.position + new Vector3(0f, -0.6f, 0f);
             Destroy(gameObject);
         }
     }

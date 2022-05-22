@@ -456,6 +456,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1899652397104117795, guid: 132948c308e67d540bed3e0b86dbe0cf, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1899652397104117796, guid: 132948c308e67d540bed3e0b86dbe0cf, type: 3}
       propertyPath: m_Name
       value: zombie (3)
@@ -1412,10 +1416,10 @@ Camera:
   m_FocalLength: 50
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0
-    y: 0
-    width: 1
-    height: 1
+    x: 0.24166667
+    y: 0.005555555
+    width: 0.20000002
+    height: 0.2
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
@@ -2224,7 +2228,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.073284835, y: -0.107771754}
+  m_Offset: {x: 0.073284835, y: -0.06661224}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -2235,7 +2239,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.6959689, y: 2.893628}
+  m_Size: {x: 0.6959689, y: 2.8113089}
   m_EdgeRadius: 0
 --- !u!114 &740602408
 MonoBehaviour:
@@ -5378,7 +5382,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.07328483, y: -0.1077718}
+  m_Offset: {x: 0.073284835, y: -0.07837212}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -5389,7 +5393,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.6959689, y: 2.893628}
+  m_Size: {x: 0.6959689, y: 2.8348286}
   m_EdgeRadius: 0
 --- !u!114 &1944570761
 MonoBehaviour:
@@ -14310,6 +14314,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1899652397052928268, guid: 132948c308e67d540bed3e0b86dbe0cf, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1899652397104117794, guid: 132948c308e67d540bed3e0b86dbe0cf, type: 3}
       propertyPath: m_RootOrder
       value: 10
@@ -14354,9 +14362,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1899652397104117795, guid: 132948c308e67d540bed3e0b86dbe0cf, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1899652397104117796, guid: 132948c308e67d540bed3e0b86dbe0cf, type: 3}
       propertyPath: m_Name
       value: zombie
+      objectReference: {fileID: 0}
+    - target: {fileID: 1899652397104117797, guid: 132948c308e67d540bed3e0b86dbe0cf, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1899652397122689081, guid: 132948c308e67d540bed3e0b86dbe0cf, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 132948c308e67d540bed3e0b86dbe0cf, type: 3}

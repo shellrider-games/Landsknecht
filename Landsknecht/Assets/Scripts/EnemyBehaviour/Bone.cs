@@ -23,6 +23,6 @@ public class Bone : MonoBehaviour
 
     public void SetVelocity(Vector2 velocity)
     {
-        GetComponent<Rigidbody2D>().velocity = new Vector2(velocity.x,velocity.y);
+        GetComponent<Rigidbody2D>().velocity = velocity;
     }
 }
