@@ -102,10 +102,14 @@ public class PlayerController : MonoBehaviour
 
     public void TakeHit()
     {
-        Knockback();
-        currentHealth--;
-        UIController.instance.SetHPValue(currentHealth);
-        if(currentHealth <= 0) Die();
+        if (!inKnockback)
+        {
+            Knockback();
+            currentHealth--;
+            UIController.instance.SetHPValue(currentHealth);
+            if(currentHealth <= 0) Die();
+        }
+      
     }
 
     private void Knockback()
