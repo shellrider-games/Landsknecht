@@ -231,4 +231,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timer: 1
   timerRandomArea: 0.5
-  light: {fileID: 6666637401745741305}
+  candleLight: {fileID: 6666637401745741305}

@@ -11,6 +11,8 @@ public class Zombie : MonoBehaviour
     public float detectDistance;
     public float movementSpeed;
 
+    public GameObject deathAnimation;
+
     private SpriteRenderer _spriteRenderer;
     private Animator _animator;
     private Rigidbody2D _rigidbody;
@@ -92,7 +94,11 @@ public class Zombie : MonoBehaviour
     
     public void TakeHit()
     {
-        if(--hitPoints <= 0) Destroy(gameObject);
+        if (--hitPoints <= 0)
+        {
+            Instantiate(deathAnimation, transform.position, Quaternion.identity);
+            Destroy(gameObject);
+        }
     }
 
     private void OnDrawGizmosSelected()

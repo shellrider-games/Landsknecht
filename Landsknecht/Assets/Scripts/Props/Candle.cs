@@ -12,10 +12,10 @@ public class Candle : MonoBehaviour
     private float maxTime;
     private float maxRadius;
 
-    public Light2D light;
+    public Light2D candleLight;
     void Start()
     {
-        maxRadius = light.pointLightInnerRadius;
+        maxRadius = candleLight.pointLightInnerRadius;
     }
 
    
@@ -32,11 +32,11 @@ public class Candle : MonoBehaviour
             timerCounter -= Time.deltaTime;
             if (goOut)
             {
-                light.pointLightInnerRadius = Mathf.Lerp(maxRadius, 0, (maxTime - timerCounter) / maxTime);
+                candleLight.pointLightInnerRadius = Mathf.Lerp(maxRadius, 0, (maxTime - timerCounter) / maxTime);
             }
             else
             {
-                light.pointLightInnerRadius = Mathf.Lerp(0, maxRadius, (maxTime - timerCounter) / maxTime);
+                candleLight.pointLightInnerRadius = Mathf.Lerp(0, maxRadius, (maxTime - timerCounter) / maxTime);
             }
         }
     }

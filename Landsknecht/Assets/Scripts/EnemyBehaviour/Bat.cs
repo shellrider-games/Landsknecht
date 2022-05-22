@@ -7,6 +7,8 @@ public class Bat : MonoBehaviour
     public int hitPoints;
     public float speed;
 
+    public GameObject deathAnimation;
+    
     private Rigidbody2D _rigidbody;
     private bool started;
     // Start is called before the first frame update
@@ -27,7 +29,11 @@ public class Bat : MonoBehaviour
     }
     public void TakeHit()
     {
-        if(--hitPoints <= 0) Destroy(gameObject);
+        if (--hitPoints <= 0)
+        {
+            Instantiate(deathAnimation, transform.position, Quaternion.identity);
+            Destroy(gameObject);
+        }
     }
 
     public void StartUP()

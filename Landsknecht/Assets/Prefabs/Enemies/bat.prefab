@@ -296,6 +296,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitPoints: 1
   speed: 6
+  deathAnimation: {fileID: 8839602688977221579, guid: b0106df5f5a23f244862f0029a32e95c, type: 3}
 --- !u!50 &5972455445199011787
 Rigidbody2D:
   serializedVersion: 4
